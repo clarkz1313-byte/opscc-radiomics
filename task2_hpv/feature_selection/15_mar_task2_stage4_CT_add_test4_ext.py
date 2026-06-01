@@ -16,6 +16,7 @@ Usage:
 
 from __future__ import annotations
 
+import os
 import sys
 import warnings
 from pathlib import Path
@@ -45,11 +46,11 @@ TRAIN_FILE   = SCRIPT_DIR / "12_mar_task2_rad_data" / "13_mar_task2_CT_primary_t
 TEST_FILE    = SCRIPT_DIR / "12_mar_task2_rad_data" / "13_mar_task2_CT_primary_test.csv"
 EXT_FILE     = SCRIPT_DIR / "12_mar_task2_rad_data" / "12_mar_task2_CT_primary_ext.csv"
 
-DB_HOST     = "localhost"
-DB_PORT     = 5432
-DB_USER     = "postgres"
-DB_PASSWORD = "1730"
-DB_NAME     = "optuna_db"
+DB_HOST     = os.environ.get("OPTUNA_DB_HOST", "localhost")
+DB_PORT     = int(os.environ.get("OPTUNA_DB_PORT", "5432"))
+DB_USER     = os.environ.get("OPTUNA_DB_USER", "postgres")
+DB_PASSWORD = os.environ.get("OPTUNA_DB_PASSWORD", "userdefined")
+DB_NAME     = os.environ.get("OPTUNA_DB_NAME", "optuna_db")
 DB_URL      = f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
 PIPELINES = [1, 2, 3, 6, 7, 8, 12]

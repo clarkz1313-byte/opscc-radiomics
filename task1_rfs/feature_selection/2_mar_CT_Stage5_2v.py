@@ -61,11 +61,11 @@ PATH_CT_DEV      = SCRIPT_DIR / "27_feb_CT_development.csv"
 PATH_STAGE3      = SCRIPT_DIR / "27_feb_CT_Stage3_2v_Processed_result.csv"
 PATH_CT_EXTERNAL = SCRIPT_DIR / "27_feb_CT_external.csv"
 
-DB_HOST = "localhost"
-DB_PORT = 5432
-DB_USER = "postgres"
-DB_PASSWORD = "1730"
-DB_NAME = "optuna_db"
+DB_HOST = os.environ.get("OPTUNA_DB_HOST", "localhost")
+DB_PORT = int(os.environ.get("OPTUNA_DB_PORT", "5432"))
+DB_USER = os.environ.get("OPTUNA_DB_USER", "postgres")
+DB_PASSWORD = os.environ.get("OPTUNA_DB_PASSWORD", "userdefined")
+DB_NAME = os.environ.get("OPTUNA_DB_NAME", "optuna_db")
 DB_URL = f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 STORAGE_TIMEOUT = 600
 

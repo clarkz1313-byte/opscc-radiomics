@@ -38,6 +38,9 @@ dice-ml >= 0.9
 optuna >= 3.3
 pandas >= 2.0
 numpy >= 1.24
+matplotlib >= 3.7
+seaborn >= 0.12
+scipy >= 1.11
 xgboost == 3.0.5
 joblib >= 1.3
 pingouin >= 0.5.4
