@@ -28,7 +28,7 @@ PET/CT radiomics pipeline for oropharyngeal squamous cell carcinoma (OPSCC):
 ## Dependencies
 
 ```
-python >= 3.9
+python == 3.8
 pyradiomics == 3.0.1
 scikit-learn >= 1.3
 scikit-survival >= 0.21
@@ -38,6 +38,9 @@ dice-ml >= 0.9
 optuna >= 3.3
 pandas >= 2.0
 numpy >= 1.24
+xgboost == 3.0.5
+joblib >= 1.3
+pingouin >= 0.5.4
 ```
 
 Install all at once:
