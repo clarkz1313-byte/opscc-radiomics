@@ -1,7 +1,7 @@
 # OPSCC Radiomics Analysis Pipeline
 
-Master thesis project — Uppsala University, 2026  
-Department of Immunology, Genetics and Pathology
+A repo for Master thesis project in Precision Medicine — Uppsala University
+In collaboration with AIbiomelab - College of Medicine, Taipei Medical University, Taiwan
 
 ## Overview
 
